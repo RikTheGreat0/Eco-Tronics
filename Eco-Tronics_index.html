@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Tronics | Fighting Electronic Waste</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #4ade80 0%, #3b82f6 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+        .earth-spin {
+            animation: spin 20s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-recycle text-green-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">Eco-Tronics</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#about" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#impact" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">Impact</a>
+                    <a href="#solutions" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">Solutions</a>
+                    <a href="#take-action" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Take Action</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-green-600 hover:bg-gray-50">About</a>
+                <a href="#impact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-green-600 hover:bg-gray-50">Impact</a>
+                <a href="#solutions" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-green-600 hover:bg-gray-50">Solutions</a>
+                <a href="#take-action" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-green-500 hover:bg-green-600">Take Action</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">The Growing Problem of Electronic Waste</h1>
+                    <p class="text-xl mb-8">Every year, millions of tons of electronic devices end up in landfills, releasing toxic materials and wasting precious resources. Together, we can change this.</p>
+                    <div class="flex space-x-4">
+                        <a href="#take-action" class="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-md font-medium transition duration-300">Join the Movement</a>
+                        <a href="#about" class="border-2 border-white text-white hover:bg-white hover:text-green-600 px-6 py-3 rounded-md font-medium transition duration-300">Learn More</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3099/3099677.png" alt="Electronic Waste" class="w-64 h-64 earth-spin">
+                        <div class="absolute -bottom-5 -right-5 bg-yellow-400 rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                            <i class="fas fa-exclamation text-2xl text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About E-Waste Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What is Electronic Waste?</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="E-waste pile" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-gray-700 mb-6 text-lg">
+                        Electronic waste, or e-waste, refers to discarded electrical or electronic devices. This includes everything from old smartphones and laptops to refrigerators and televisions. As technology advances at a rapid pace, our consumption of electronic devices has skyrocketed, leading to an unprecedented amount of e-waste.
+                    </p>
+                    <p class="text-gray-700 mb-6 text-lg">
+                        What makes e-waste particularly dangerous is the toxic materials it contains, such as lead, mercury, cadmium, and brominated flame retardants. When improperly disposed of, these substances can leach into soil and water, posing serious risks to human health and the environment.
+                    </p>
+                    <div class="bg-green-50 border-l-4 border-green-500 p-4">
+                        <p class="text-green-700 font-medium">
+                            <i class="fas fa-info-circle mr-2"></i> Did you know? Only 17.4% of e-waste is formally collected and recycled globally. The rest is either dumped, traded, or recycled under inferior conditions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">The Global Impact of E-Waste</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+            </div>
+            
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="bg-white p-6 rounded-lg shadow-md stat-card">
+                    <div class="text-green-500 text-4xl mb-4">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">53.6 Million Tons</h3>
+                    <p class="text-gray-600">Global e-waste generated in 2019 - equivalent to 350 cruise ships</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md stat-card">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">$57 Billion</h3>
+                    <p class="text-gray-600">Value of raw materials discarded in e-waste annually</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md stat-card">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="fas fa-skull-crossbones"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">50 Million People</h3>
+                    <p class="text-gray-600">Work in unsafe e-waste processing worldwide</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md stat-card">
+                    <div class="text-yellow-500 text-4xl mb-4">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">21% Increase</h3>
+                    <p class="text-gray-600">Projected growth in e-waste by 2030 if trends continue</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Environmental Consequences</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-green-500">
+                                    <i class="fas fa-radiation"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Toxic chemicals from e-waste can contaminate soil and water supplies for generations</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-green-500">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Informal burning of e-waste releases harmful dioxins into the atmosphere</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-green-500">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Heavy metals from electronics accumulate in waterways, poisoning aquatic life</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-green-500">
+                                    <i class="fas fa-tree"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Mining for new materials causes deforestation and habitat destruction</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="E-waste environmental impact" class="h-full w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">How You Can Make a Difference</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md card-hover transition duration-300">
+                    <div class="text-green-500 text-4xl mb-6">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Responsible Recycling</h3>
+                    <p class="text-gray-600 mb-4">Find certified e-waste recyclers in your area who follow proper environmental and safety standards.</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Use manufacturer take-back programs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Look for e-Stewards or R2 certified recyclers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Never throw electronics in regular trash</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md card-hover transition duration-300">
+                    <div class="text-blue-500 text-4xl mb-6">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Extend Device Lifespan</h3>
+                    <p class="text-gray-600 mb-4">The longer we use our devices, the less e-waste we generate. Simple maintenance can add years to your electronics.</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Use protective cases and screen protectors</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Regularly clean and update your devices</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Consider repairs before replacement</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md card-hover transition duration-300">
+                    <div class="text-purple-500 text-4xl mb-6">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Smart Purchasing</h3>
+                    <p class="text-gray-600 mb-4">Make environmentally conscious decisions when buying new electronics to reduce future waste.</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span>Choose energy-efficient and durable products</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span>Look for modular/upgradable designs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span>Consider refurbished or second-hand options</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-green-50 rounded-lg p-8">
+                <div class="md:flex items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">The Circular Economy Approach</h3>
+                        <p class="text-gray-700">Instead of the traditional "take-make-waste" linear model, a circular economy aims to keep products and materials in use for as long as possible through sharing, leasing, reusing, repairing, refurbishing, and recycling.</p>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <div class="bg-white p-4 rounded-full shadow-lg">
+                            <i class="fas fa-infinity text-green-500 text-6xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Take Action Section -->
+    <section id="take-action" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Join the E-Waste Revolution</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Take Action Today</h3>
+                    <p class="text-gray-300 mb-8">Small individual actions, when multiplied by millions, can transform the world. Here's how you can contribute to solving the e-waste crisis:</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-green-500 rounded-full p-2">
+                                <i class="fas fa-mobile-alt text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">Organize a Community E-Waste Drive</h4>
+                                <p class="text-gray-400 mt-1">Gather neighbors to collect electronics for proper recycling. Many recyclers offer bulk pickup services.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-green-500 rounded-full p-2">
+                                <i class="fas fa-graduation-cap text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">Educate Others</h4>
+                                <p class="text-gray-400 mt-1">Share information about e-waste with friends, family, and on social media. Awareness is the first step to change.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-green-500 rounded-full p-2">
+                                <i class="fas fa-hand-holding-heart text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">Donate Working Electronics</h4>
+                                <p class="text-gray-400 mt-1">Schools, nonprofits, and community centers often need functional devices. Your old device could change someone's life.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-gray-800 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold mb-6">Stay Informed</h3>
+                        <p class="text-gray-300 mb-6">Sign up for our newsletter to receive tips on reducing e-waste, recycling opportunities, and updates on the global e-waste situation.</p>
+                        
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+                                <input type="text" id="name" class="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:ring-green-500 focus:border-green-500 p-2">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                                <input type="email" id="email" class="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:ring-green-500 focus:border-green-500 p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <input id="terms" type="checkbox" class="h-4 w-4 rounded bg-gray-700 border-gray-600 text-green-500 focus:ring-green-500">
+                                <label for="terms" class="ml-2 block text-sm text-gray-300">
+                                    I agree to receive emails from Eco-Tronics
+                                </label>
+                            </div>
+                            <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-md font-medium transition duration-300">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Eco-Tronics</h3>
+                    <p class="text-gray-400">Committed to reducing electronic waste and promoting sustainable technology practices worldwide.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About E-Waste</a></li>
+                        <li><a href="#impact" class="text-gray-400 hover:text-white">Global Impact</a></li>
+                        <li><a href="#solutions" class="text-gray-400 hover:text-white">Solutions</a></li>
+                        <li><a href="#take-action" class="text-gray-400 hover:text-white">Take Action</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Recycling Centers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Research Papers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Educational Materials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Volunteer Opportunities</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">123 Green Way, Eco City, Earth</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">info@eco-tronics.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 Eco-Tronics. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-green-500 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
